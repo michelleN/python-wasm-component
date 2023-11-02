@@ -15,5 +15,14 @@ componentize-py -d wit -w http-app bindings .
 
 4. Run `spin up --build` to build and run your component. Under the hood `spin build` is running `componentize-py -d wit -w http-app componentize app -o app.wasm` which builds you WASM component and outputs it as `app.wasm`.
 
+5. Test using curl
+
+```console
+$ curl -i localhost:3000
+HTTP/1.1 200 OK
+hello: WORLD
+content-length: 0
+date: Thu, 02 Nov 2023 22:25:33 GMT
+```
 
 Enjoy!
