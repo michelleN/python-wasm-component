@@ -12,6 +12,6 @@ from http_app.imports.types import (
 
 class IncomingHandler(exports.IncomingHandler):
     def handle(self, request: IncomingRequest, response_out: ResponseOutparam):
-        response = OutgoingResponse(200, Fields([("content-type", b"text/plain")]))
+        response = OutgoingResponse(200, Fields([("HELLO", b"WORLD")]))
 
         ResponseOutparam.set(response_out, Ok(response))
