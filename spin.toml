@@ -1,0 +1,15 @@
+spin_manifest_version = "1"
+authors = ["Michelle Dhanani <michelle@fermyon.com>"]
+description = ""
+name = "pythonexample"
+trigger = { type = "http", base = "/" }
+version = "0.1.0"
+
+[[component]]
+id = "pythonexample"
+source = "app.wasm"
+[component.trigger]
+route = "/..."
+[component.build]
+command = "componentize-py -d wit -w http-app componentize app -o app.wasm"
+watch = ["app.py", "Pipfile"]
